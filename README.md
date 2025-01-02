@@ -1,15 +1,7 @@
 ## Pre-requisites
 
-- Node.js
-- npm
-
-# or
-
-- yarn
-
-# or
-
-- pnpm
+- Node.js | bun
+- npm | pnpm
 
 # or
 
