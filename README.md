@@ -1,6 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Pre-requisites
+
+- Node.js
+- npm
+
+# or
+
+- yarn
+
+# or
+
+- pnpm
+
+# or
+
+- bun
+
+## Installation
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+# or
+bun install
+```
 
 ## Getting Started
+
+First, create a `.env` file in the root of the project copying the content of the .env.example file populated with the following values:
+
+```bash
+export NEXTAUTH_SECRET="$(openssl rand -base64 32)"
+export NEXTAUTH_JWT_SECRET="$(openssl rand -base64 32)"
+export NEXTAUTH_URL="http://localhost:3000"
+```
+
+## Connecting to a Database
+
+This project uses Prisma with MongoDB. To connect to a MongoDB database, you need to set the `DATABASE_URL` environment variable in the `.env` file.
+
+```bash
+export DATABASE_URL="mongodb+srv://<username>:<password>@<cluster>/<database>?retryWrites=true&w=majority"
+```
+
+### Using MongoDB extension for Visual Studio Code
+
+If you are using Visual Studio Code, you can install the MongoDB extension to connect to your database.
+
+## Running the Database Migrations
+
+To run the database migrations, you can use the following command:
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+## Development
 
 First, run the development server:
 
